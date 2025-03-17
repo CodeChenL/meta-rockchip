@@ -11,6 +11,7 @@ inherit local-git
 
 SRC_URI = " \
 	git://github.com/JeffyCN/mirrors.git;protocol=https;branch=libmali; \
+	file://g25p0-00eac0.mali_csffw.bin \
 "
 SRCREV = "af1d910cd29d52e354f6679e46d1bf2bbc7ca476"
 S = "${WORKDIR}/git"
@@ -81,6 +82,9 @@ do_install:append () {
 		sed -i 's/defined(MESA_EGL_NO_X11_HEADERS)/1/' \
 			${D}${includedir}/EGL/eglplatform.h
 	fi
+
+	install -d ${D}/lib/firmware
+	install -m 0755 ${WORKDIR}/g25p0-00eac0.mali_csffw.bin ${D}/lib/firmware/g25p0-00eac0.mali_csffw.bin
 }
 
 INSANE_SKIP:${PN} = "already-stripped ldflags dev-so textrel buildpaths"
