@@ -20,6 +20,7 @@ more reproducible builds, and smaller image size.
 
 Signed-off-by: Masahiro Yamada <yamada.masahiro@socionext.com>
 Reviewed-by: Simon Glass <sjg@chromium.org>
+Upstream-Status: Inappropriate [Rockchip specific]
 ---
  Makefile | 3 +++
  1 file changed, 3 insertions(+)

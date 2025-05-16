@@ -8,6 +8,9 @@ Retry all filesystems when failed to mount with specified ones.
 
 Change-Id: Ic1b794cc61d61f1d0715e3b32400b3e96b0dddea
 Signed-off-by: Jeffy Chen <jeffy.chen@rock-chips.com>
+
+Upstream-Status: Inappropriate [Rockchip specific]
+
 ---
  init/do_mounts.c | 11 +++++++++++
  1 file changed, 11 insertions(+)

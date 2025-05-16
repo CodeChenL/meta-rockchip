@@ -6,6 +6,8 @@ Subject: [PATCH] MALI: bifrost: CSF: do not include mali_csffw.bin into driver
 
 Signed-off-by: Stephen Chen <stephen@radxa.com>
 
+Upstream-Status: Inappropriate [Rockchip specific]
+
 diff --git a/drivers/gpu/arm/bifrost/Kconfig b/drivers/gpu/arm/bifrost/Kconfig
 index b8ceff10e250..eb8657ccf323 100644
 --- a/drivers/gpu/arm/bifrost/Kconfig

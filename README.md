@@ -36,8 +36,8 @@ In order to build an image with BSP support for a given release, you need to dow
 
 ```shell
 ~ $ mkdir yocto; cd yocto
-~/yocto $ git clone git://git.yoctoproject.org/poky -b styhead
-~/yocto $ git clone git://git.openembedded.org/meta-openembedded.git -b styhead
+~/yocto $ git clone git://git.yoctoproject.org/poky
+~/yocto $ git clone git://git.openembedded.org/meta-openembedded.git
 ```
 
 And put the meta-rockchip layer here too.
@@ -76,6 +76,13 @@ You should then be able to build a image with "rockchip-image" enabled in the lo
 
 ```makefile
 INHERIT:append = " rockchip-image"
+```
+
+Enable Mesa for Panfrost user level driver and allow root login
+
+```makefile
+IMAGE_INSTALL:append = " glmark2 mesa mesa-demos linux-firmware"
+IMAGE_FEATURES += "allow-empty-password allow-root-login empty-root-password post-install-logging"
 ```
 
 ```shell

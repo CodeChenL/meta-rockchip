@@ -9,7 +9,7 @@ inherit local-git
 
 SRCREV = "${AUTOREV}"
 SRC_URI = " \
-	git://github.com/radxa/kernel.git;protocol=https;branch=linux-6.1-stan-rkr4.1-buildroot; \
+	git://github.com/radxa/kernel.git;protocol=https;branch=linux-6.1-stan-rkr4.1; \
 "
 
 S = "${WORKDIR}/git"

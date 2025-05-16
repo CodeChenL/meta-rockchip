@@ -57,6 +57,17 @@ do_kernel_metadata:prepend() {
 
 		echo "Merging ${KBUILD_DEFCONFIGS} into ${KBUILD_DEFCONFIG}..."
 		cat ${KBUILD_DEFCONFIGS:-$CONFIGS} > ${KBUILD_DEFCONFIG} || true
+
+		echo "CONFIG_DRM_LIMA=m" >> ${KBUILD_DEFCONFIG} || true
+		echo "CONFIG_DRM_PANFROST=m" >> ${KBUILD_DEFCONFIG} || true
+		echo "CONFIG_DRM_PANTHOR=m" >> ${KBUILD_DEFCONFIG} || true
+		echo "CONFIG_MALI400=n" >> ${KBUILD_DEFCONFIG} || true
+		echo "CONFIG_MALI450=n" >> ${KBUILD_DEFCONFIG} || true
+		echo "CONFIG_MALI470=n" >> ${KBUILD_DEFCONFIG} || true
+		echo "CONFIG_MALI_MIDGARD=n" >> ${KBUILD_DEFCONFIG} || true
+		echo "CONFIG_MALI_BIFROST=n" >> ${KBUILD_DEFCONFIG} || true
+		echo "CONFIG_DRM_IGNORE_IOTCL_PERMIT=n" >> ${KBUILD_DEFCONFIG} || true
+		echo "CONFIG_MALI_CSF_SUPPORT=n" >> ${KBUILD_DEFCONFIG} || true
 	fi
 	cd -
 }

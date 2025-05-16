@@ -7,6 +7,7 @@ Sync a few files from v2020.01 and v2025.01
 
 Change-Id: Ib88caeb2b29520146c8fcf7c7e1a0eb2823aaab7
 Signed-off-by: Jeffy Chen <jeffy.chen@rock-chips.com>
+Upstream-Status: Inappropriate [Rockchip specific]
 ---
  scripts/dtc/README                    | 106 ++++
  scripts/dtc/pylibfdt/Makefile         |  24 +-

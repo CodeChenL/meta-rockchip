@@ -6,6 +6,9 @@ Subject: [PATCH 2/3] HACK: drm: rockchip: Force enable legacy-cursor-update
 For async commit.
 
 Change-Id: I36ea434a97cb3205441304795526ee7e028da4fd
+
+Upstream-Status: Inappropriate [Rockchip specific]
+
 Signed-off-by: Jeffy Chen <jeffy.chen@rock-chips.com>
 ---
  drivers/gpu/drm/rockchip/rockchip_drm_vop.c  | 2 +-
