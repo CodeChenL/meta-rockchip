@@ -32,6 +32,8 @@ DEPENDS:append = " ${PYTHON_PN}-native"
 DEPENDS:append = " coreutils-native ${PYTHON_PN}-pyelftools-native"
 
 do_configure:prepend() {
+	# The make.sh requires ../rkbin/
+	ln -rsf ${UNPACKDIR}/rkbin ${UNPACKDIR}/../rkbin
 
 	# Make sure we use /usr/bin/env ${PYTHON_PN} for scripts
 	for s in `grep -rIl python ${S}`; do
